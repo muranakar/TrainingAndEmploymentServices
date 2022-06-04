@@ -20,8 +20,4 @@ struct PrefectureRepository {
     func save(prefecture: JapanesePrefecture) {
         UserDefaults.standard.set(prefecture.nameWithSuffix, forKey: key)
     }
-    // 削除はなくてもよいか。
-//    func remove() {
-//       UserDefaults.standard.removeObject(forKey: key)
-//    }
 }

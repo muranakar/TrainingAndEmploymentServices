@@ -12,14 +12,14 @@ class UseCaseCsvConversionTests: XCTestCase {
 
     func testExample() throws {
       let facilityInformations =
-        UseCaseCsvConversion.convertFacilityInformationFromCsv(serviceType: .homestayTypeSelfRelianceTraining)
+        UseCaseFilterFacilityInformation.filterFacilityInformationFromDataBase(filterServiceType: .homestayTypeSelfRelianceTraining)
         XCTAssertEqual(facilityInformations[1].corporateName, "社会福祉法人　緑伸会")
         XCTAssertEqual(facilityInformations[1].address, "北海道札幌市中央区南２２条西９丁目１番３７号")
         XCTAssertEqual(facilityInformations[1].latitude, "43.03071238")
 //        "01100","A0000041524","札幌市","社会福祉法人　緑伸会","しゃかいふくしほうじんりょくしんかい","2430005013423","北海道札幌市中央区","札幌市中央区大通西１０丁目４番地ダンロップSKビル","011-261-1313","011-251-3132","https://ryoku-sin.or.jp/","宿泊型自立訓練","ぴあ山鼻","ぴあやまはな","0110103645","北海道札幌市中央区","南２２条西９丁目１番３７号","011-206-4984","011-206-4985","https://ryoku-sin.or.jp/",43.03071238,141.34788120,"","","","",,,10
 
         let workforceRehabilitationSupportTypeBFacilityInformations =
-          UseCaseCsvConversion.convertFacilityInformationFromCsv(serviceType: .workforceRehabilitationSupportTypeB)
+        UseCaseFilterFacilityInformation.filterFacilityInformationFromDataBase(filterServiceType: .workforceRehabilitationSupportTypeB)
           XCTAssertEqual(
             workforceRehabilitationSupportTypeBFacilityInformations[1].corporateName,
             "株式会社　キャリアエディション"

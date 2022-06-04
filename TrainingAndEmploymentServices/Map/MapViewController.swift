@@ -23,9 +23,13 @@ class MapViewController: UIViewController {
     private var locationManager: CLLocationManager!
     private var prefecture: JapanesePrefecture = .osaka
     private let prefectureRepository = PrefectureRepository()
+    private var filterServiceType: FilterServiceType = .all
+    private let filterServiceTypeRepository = FilterServiceTypeRepository()
     private var facilityInformations: [FacilityInformation] = []
     private var annotationArray: [MKPointAnnotation] = []
     private var selectedFacilityInformation: FacilityInformation?
+
+    var indicator = UIActivityIndicatorView()
 
     let pickerViewItemsOfPrefectureNameWithSuffix = JapanesePrefecture.all.map { prefecture in
         prefecture.nameWithSuffix
@@ -33,12 +37,22 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // homestayに変更している。汎用的なものに変更する必要がある。
-        facilityInformations = UseCaseCsvConversion.convertFacilityInformationFromCsv(serviceType: .homestayTypeSelfRelianceTraining)
-        print(facilityInformations.count)
-        print(facilityInformations[1])
-        print("")
-        setupLococationManager()
+        if let loadedFilterServiceType = filterServiceTypeRepository.load() {
+            filterServiceType = loadedFilterServiceType
+        } else {
+            filterServiceType = .all
+        }
+        let dispatchQueue = DispatchQueue.global()
+        dispatchQueue.async {[weak self] in
+            self?.facilityInformations =
+            UseCaseFilterFacilityInformation.filterFacilityInformationFromDataBase(
+                filterServiceType: self!.filterServiceType
+            )
+            DispatchQueue.main.async { [weak self] in
+                self?.setupLococationManager()
+            }
+        }
+
         configurePrefectureLabel()
         configureViewInitialLabel()
         configureAdBannar()
@@ -49,12 +63,28 @@ class MapViewController: UIViewController {
         super.viewWillAppear(animated)
         // 都道府県情報が保存されていれば、その情報を適応
         // 保存されていない場合は、東京の情報を適応
+        if let loadedFilterServiceType = filterServiceTypeRepository.load() {
+            filterServiceType = loadedFilterServiceType
+        } else {
+            filterServiceType = .all
+        }
+
         if let loadedPrefecture = prefectureRepository.load() {
             prefecture = loadedPrefecture
         } else {
             prefecture = .tokyo
         }
-        filterFacilityInformationAndAddAnnotations(prefecture: prefecture)
+
+        let dispatchQueue = DispatchQueue.global()
+        dispatchQueue.async {[weak self] in
+            self?.facilityInformations =
+            UseCaseFilterFacilityInformation.filterFacilityInformationFromDataBase(
+                filterServiceType: self!.filterServiceType
+            )
+            DispatchQueue.main.async { [weak self] in
+                self?.filterFacilityInformationAndAddAnnotations(prefecture: self!.prefecture)
+            }
+        }
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -107,6 +137,7 @@ class MapViewController: UIViewController {
             performSegue(withIdentifier: "detailSearchVC", sender: sender)
         }
     }
+
     private func filterFacilityInformationAndAddAnnotations(prefecture: JapanesePrefecture) {
         // 都道府県ごとの事業所をフィルター実施。
         let filterFacilityInformation = facilityInformations.filter { facilityInformation in

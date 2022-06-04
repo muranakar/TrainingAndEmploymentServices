@@ -33,7 +33,6 @@ class SearchViewController: UIViewController {
     }
     @IBAction private func tapSegmentedControl(_ sender: Any) {
         searchAndReloadTableViewAndAnimationindicator(searchText: searchString)
-        
     }
 
     // 参考：https://www.letitride.jp/entry/2019/08/19/155333
@@ -41,7 +40,7 @@ class SearchViewController: UIViewController {
         // ツールバー生成 サイズはsizeToFitメソッドで自動で調整される。
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
 
-        //サイズの自動調整。敢えて手動で実装したい場合はCGRectに記述してsizeToFitは呼び出さない。
+        // サイズの自動調整。敢えて手動で実装したい場合はCGRectに記述してsizeToFitは呼び出さない。
         toolBar.sizeToFit()
 
         // 左側のBarButtonItemはflexibleSpace。これがないと右に寄らない。
@@ -50,7 +49,8 @@ class SearchViewController: UIViewController {
             target: self, action: nil
         )
         // Doneボタン
-        // let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.close, target: self, action: #selector(commitButtonTapped))
+        // let commitButton = UIBarButtonItem(
+//    barButtonSystemItem: UIBarButtonItem.SystemItem.close, target: self, action: #selector(commitButtonTapped))
         // 日本語名に変更。
         let commitButton = UIBarButtonItem(
             title: "閉じる",
@@ -128,6 +128,7 @@ class SearchViewController: UIViewController {
                 dispatchQueue.async {[weak self] in
                     self?.filitedfacilityInformation =
                     UseCaseSearch.filteredSearchFacilityInformation(
+                        filterServiceType: .all,
                         filterSearch: filterSearch,
                         string: searchText
                     )
@@ -180,7 +181,6 @@ extension SearchViewController: UITableViewDataSource {
         let isHiddenMapAttention =
         filitedfacilityInformation[indexPath.row].latitude != "" ||
         filitedfacilityInformation[indexPath.row].longitude != ""
-        
         switch categorySegumentControl.selectedSegmentIndex {
         case 0:
             // 事業所名

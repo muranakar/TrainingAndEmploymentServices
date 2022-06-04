@@ -103,7 +103,9 @@ class DetailSearchViewController: UIViewController {
             UIApplication.shared.open(url!)
         } else {
             // appleMapを開く。
-            let encoded = "http://maps.apple.com/?q=\(address)".addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+            let encoded =
+            "http://maps.apple.com/?q=\(address)"
+                .addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
             url = URL(string: encoded)
             UIApplication.shared.open(url!)
         }

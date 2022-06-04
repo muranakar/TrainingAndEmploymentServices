@@ -1,14 +1,15 @@
 //
 //  CSVConversion.swift
-//  CoreLocationSample
+//  TrainingAndEmploymentServices
 //
-//  Created by 村中令 on 2022/05/05.
+//  Created by 村中令 on 2022/06/05.
 //
 
 import Foundation
+import SwiftUI
 
-struct UseCaseCsvConversion {
-    static func convertFacilityInformationFromCsv(serviceType: ServiceType) -> [FacilityInformation] {
+struct CsvConversion {
+    static func convertFacilityInformationFromCsv (serviceType: ServiceType) -> [FacilityInformation] {
         var csvLineOneDimensional: [String] = []
         var csvLineTwoDimensional: [[String]] = []
         var pediatricWelfareServices: [FacilityInformation] = []
@@ -25,8 +26,8 @@ struct UseCaseCsvConversion {
         csvLineOneDimensional.forEach { string in
             var array: [String] = []
             array = string.components(separatedBy: ",")
-            var revisionArray = array.map { string -> String in
-                var revisonString = string.replacingOccurrences(of: "\"", with: "")
+            let revisionArray = array.map { string -> String in
+                let revisonString = string.replacingOccurrences(of: "\"", with: "")
                 return revisonString
             }
             guard array.count == 29 else { return }
@@ -56,7 +57,7 @@ struct UseCaseCsvConversion {
     }
 }
 
-enum ServiceType {
+enum ServiceType: CaseIterable {
     case selfRelianceTrainingFunctionalTraining
     case selfRelianceTrainingLifeTraining
     case homestayTypeSelfRelianceTraining
@@ -104,4 +105,3 @@ extension ServiceType {
         }
     }
 }
-

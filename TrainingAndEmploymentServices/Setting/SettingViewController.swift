@@ -9,22 +9,21 @@ import UIKit
 import GoogleMobileAds
 
 class SettingViewController: UIViewController {
-    let pickerViewItemsOfPrefecture = JapanesePrefecture.all.map { prefecture in
-        prefecture.nameWithSuffix
-    }
-    let prefectureRepository = PrefectureRepository()
+    let pickerViewItemsOfFilterServiceType = FilterServiceType.allCases
+    let filterServiceTypeRepository = FilterServiceTypeRepository()
 
-    @IBOutlet weak private var prefecturePickerView: UIPickerView!
-    @IBOutlet weak private var bannerView: GADBannerView!  // 追加したUIViewを接続
-
+    @IBOutlet weak private var filterServiceTypePickerView: UIPickerView!
+    @IBOutlet weak private var bannerView: GADBannerView!
+    // 追加したUIViewを接続
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAdBannar()
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        selectRowPrefecturePickerView()
+        selectRowFilterServiceTypePickerView()
     }
+
     @IBAction private func configureCoreLocation(_ sender: Any) {
         configureLocationInformation()
     }
@@ -33,11 +32,11 @@ class SettingViewController: UIViewController {
         jumpToTwitterInformation()
     }
 
-    private func selectRowPrefecturePickerView() {
-        guard let loadedPrefecture = prefectureRepository.load() else { return }
-        let prefectureRow = pickerViewItemsOfPrefecture.firstIndex(of: loadedPrefecture.nameWithSuffix)
-        guard let prefectureRow = prefectureRow else { return }
-        prefecturePickerView.selectRow(prefectureRow, inComponent: 0, animated: true)
+    private func selectRowFilterServiceTypePickerView() {
+        guard let loadedFilterServiceType = filterServiceTypeRepository.load() else { return }
+        let filterServiceTypeRow = pickerViewItemsOfFilterServiceType.firstIndex(of: loadedFilterServiceType)
+        guard let filterServiceTypeRow = filterServiceTypeRow else { return }
+        filterServiceTypePickerView.selectRow(filterServiceTypeRow, inComponent: 0, animated: true)
     }
 
     private func configureLocationInformation() {
@@ -65,12 +64,12 @@ class SettingViewController: UIViewController {
 
 extension SettingViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        pickerViewItemsOfPrefecture[row]
+        pickerViewItemsOfFilterServiceType[row].string
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let prefecture = JapanesePrefecture.all.filter { $0.nameWithSuffix == pickerViewItemsOfPrefecture[row] }.first!
-        prefectureRepository.save(prefecture: prefecture)
+        let filterServiceType = FilterServiceType.allCases.filter { $0.string == pickerViewItemsOfFilterServiceType[row].string }.first!
+        filterServiceTypeRepository.save(filterServiceType: filterServiceType)
     }
 }
 
@@ -80,6 +79,6 @@ extension SettingViewController: UIPickerViewDataSource {
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        pickerViewItemsOfPrefecture.count
+        pickerViewItemsOfFilterServiceType.count
     }
 }

@@ -9,11 +9,12 @@ import Foundation
 
 struct UseCaseSearch {
     static func filteredSearchFacilityInformation(
+        filterServiceType: FilterServiceType,
         filterSearch: FilterSearch,
         string: String
     ) -> [FacilityInformation] {
-        // homestrayに変更している、汎用的なものに変更する必要がある。
-        let allFacilityInformation = UseCaseCsvConversion.convertFacilityInformationFromCsv(serviceType: .homestayTypeSelfRelianceTraining)
+        let allFacilityInformation =
+        UseCaseFilterFacilityInformation.filterFacilityInformationFromDataBase(filterServiceType: filterServiceType)
         var filterFacilityInformation: [FacilityInformation]
         switch filterSearch {
         case .officeNameAndOfficeNameKana:
@@ -27,6 +28,39 @@ struct UseCaseSearch {
                 .filter { $0.address.contains(string) }
         }
         return filterFacilityInformation
+    }
+}
+
+enum FilterServiceType: CaseIterable {
+    case all
+    case selfRelianceTrainingFunctionalTraining
+    case selfRelianceTrainingLifeTraining
+    case homestayTypeSelfRelianceTraining
+    case laborMigrationSupport
+    case workforceRehabilitationSupportTypeA
+    case workforceRehabilitationSupportTypeB
+    case workForceSupport
+}
+extension FilterServiceType {
+    var string: String {
+        switch self {
+        case .all:
+            return "全てのサービス"
+        case .selfRelianceTrainingFunctionalTraining:
+            return "自立訓練(機能訓練)"
+        case .selfRelianceTrainingLifeTraining:
+            return "自立訓練(生活訓練)"
+        case .homestayTypeSelfRelianceTraining:
+            return "宿泊型自立訓練"
+        case .laborMigrationSupport:
+            return "就労移行支援"
+        case .workforceRehabilitationSupportTypeA:
+            return "就労継続支援Ａ型"
+        case .workforceRehabilitationSupportTypeB:
+            return "就労継続支援Ｂ型"
+        case .workForceSupport:
+            return "就労定着支援"
+        }
     }
 }
 
