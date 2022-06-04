@@ -33,7 +33,11 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        facilityInformations = UseCaseCsvConversion.convertFacilityInformationFromCsv()
+        // homestayに変更している。汎用的なものに変更する必要がある。
+        facilityInformations = UseCaseCsvConversion.convertFacilityInformationFromCsv(serviceType: .homestayTypeSelfRelianceTraining)
+        print(facilityInformations.count)
+        print(facilityInformations[1])
+        print("")
         setupLococationManager()
         configurePrefectureLabel()
         configureViewInitialLabel()

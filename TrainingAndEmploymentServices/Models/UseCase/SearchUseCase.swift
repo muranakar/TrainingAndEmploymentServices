@@ -12,7 +12,8 @@ struct UseCaseSearch {
         filterSearch: FilterSearch,
         string: String
     ) -> [FacilityInformation] {
-        let allFacilityInformation = UseCaseCsvConversion.convertFacilityInformationFromCsv()
+        // homestrayに変更している、汎用的なものに変更する必要がある。
+        let allFacilityInformation = UseCaseCsvConversion.convertFacilityInformationFromCsv(serviceType: .homestayTypeSelfRelianceTraining)
         var filterFacilityInformation: [FacilityInformation]
         switch filterSearch {
         case .officeNameAndOfficeNameKana:

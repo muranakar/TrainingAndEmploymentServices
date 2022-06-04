@@ -8,12 +8,12 @@
 import Foundation
 
 struct UseCaseCsvConversion {
-    static func convertFacilityInformationFromCsv() -> [FacilityInformation] {
+    static func convertFacilityInformationFromCsv(serviceType: ServiceType) -> [FacilityInformation] {
         var csvLineOneDimensional: [String] = []
         var csvLineTwoDimensional: [[String]] = []
         var pediatricWelfareServices: [FacilityInformation] = []
         guard let path = Bundle.main.path(
-            forResource: "ChildDevelopmentSupport",
+            forResource: "\(serviceType.stringEnglish)",
             ofType: "csv"
         ) else {
             print("csvファイルがないよ")
@@ -25,9 +25,14 @@ struct UseCaseCsvConversion {
         csvLineOneDimensional.forEach { string in
             var array: [String] = []
             array = string.components(separatedBy: ",")
+            var revisionArray = array.map { string -> String in
+                var revisonString = string.replacingOccurrences(of: "\"", with: "")
+                return revisonString
+            }
             guard array.count == 29 else { return }
-            csvLineTwoDimensional.append(array)
+            csvLineTwoDimensional.append(revisionArray)
         }
+
         // 二次元配列のString型を、共通型に変換
         csvLineTwoDimensional.forEach { array in
             let pediatricWelfareService = FacilityInformation(
@@ -50,3 +55,53 @@ struct UseCaseCsvConversion {
         return pediatricWelfareServices
     }
 }
+
+enum ServiceType {
+    case selfRelianceTrainingFunctionalTraining
+    case selfRelianceTrainingLifeTraining
+    case homestayTypeSelfRelianceTraining
+    case laborMigrationSupport
+    case workforceRehabilitationSupportTypeA
+    case workforceRehabilitationSupportTypeB
+    case workForceSupport
+}
+
+extension ServiceType {
+    var stringJapanese: String {
+        switch self {
+        case .selfRelianceTrainingFunctionalTraining:
+            return "自立訓練(機能訓練)"
+        case .selfRelianceTrainingLifeTraining:
+            return "自立訓練(生活訓練)"
+        case .homestayTypeSelfRelianceTraining:
+            return "宿泊型自立訓練"
+        case .laborMigrationSupport:
+            return "就労移行支援"
+        case .workforceRehabilitationSupportTypeA:
+            return "就労継続支援Ａ型"
+        case .workforceRehabilitationSupportTypeB:
+            return "就労継続支援Ｂ型"
+        case .workForceSupport:
+            return "就労定着支援"
+        }
+    }
+    var stringEnglish: String {
+        switch self {
+        case .selfRelianceTrainingFunctionalTraining:
+            return "SelfRelianceTrainingFunctionalTraining"
+        case .selfRelianceTrainingLifeTraining:
+            return "SelfRelianceTrainingLifeTraining"
+        case .homestayTypeSelfRelianceTraining:
+            return "HomestayTypeSelfRelianceTraining"
+        case .laborMigrationSupport:
+            return "LaborMigrationSupport"
+        case .workforceRehabilitationSupportTypeA:
+            return "WorkforceRehabilitationSupportTypeA"
+        case .workforceRehabilitationSupportTypeB:
+            return "WorkforceRehabilitationSupportTypeB"
+        case .workForceSupport:
+            return "WorkForceSupport"
+        }
+    }
+}
+

@@ -11,7 +11,15 @@
 		B2381DF7284433D100A9A9C7 /* GoogleAdID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2381DF6284433D100A9A9C7 /* GoogleAdID.swift */; };
 		B2381DFB2844414000A9A9C7 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2381DFA2844414000A9A9C7 /* SearchUseCase.swift */; };
 		B25355662844F98B003F44C7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25355652844F98B003F44C7 /* SearchTableViewCell.swift */; };
+		B2535BAB284B9CDB007899FD /* SelfRelianceTrainingFunctionalTraining.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BAA284B9CDB007899FD /* SelfRelianceTrainingFunctionalTraining.csv */; };
+		B2535BAD284B9CE3007899FD /* SelfRelianceTrainingLifeTraining.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BAC284B9CE3007899FD /* SelfRelianceTrainingLifeTraining.csv */; };
+		B2535BAF284B9CEB007899FD /* HomestayTypeSelfRelianceTraining.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BAE284B9CEB007899FD /* HomestayTypeSelfRelianceTraining.csv */; };
+		B2535BB1284B9CF7007899FD /* LaborMigrationSupport.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BB0284B9CF7007899FD /* LaborMigrationSupport.csv */; };
+		B2535BB3284B9CFE007899FD /* WorkforceRehabilitationSupportTypeA.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BB2284B9CFE007899FD /* WorkforceRehabilitationSupportTypeA.csv */; };
+		B2535BB5284B9D05007899FD /* WorkforceRehabilitationSupportTypeB.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BB4284B9D05007899FD /* WorkforceRehabilitationSupportTypeB.csv */; };
+		B2535BB7284B9D0D007899FD /* WorkForceSupport.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BB6284B9D0D007899FD /* WorkForceSupport.csv */; };
 		B254D7092836E26D00720231 /* CSVsyurousien.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254D7082836E26D00720231 /* CSVsyurousien.swift */; };
+		B28EE172284BF6B000180139 /* UseCaseCsvConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE171284BF6B000180139 /* UseCaseCsvConversionTests.swift */; };
 		B2916E8C282EFBCF006134BE /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2916E8B282EFBCF006134BE /* WebViewViewController.swift */; };
 		B2916E8E282EFBDC006134BE /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2916E8D282EFBDC006134BE /* WebView.storyboard */; };
 		B2916E91282EFCAF006134BE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2916E90282EFCAF006134BE /* WebKit.framework */; };
@@ -44,6 +52,16 @@
 		B2C2E8E828411466001A4316 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C2E8E728411466001A4316 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B28EE173284BF6B000180139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2A945C6282C6B810001B737 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2A945CD282C6B810001B737;
+			remoteInfo = TrainingAndEmploymentServices;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		126DABA565665D3A4A79A3F3 /* Pods-TrainingAndEmploymentServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingAndEmploymentServices.debug.xcconfig"; path = "Target Support Files/Pods-TrainingAndEmploymentServices/Pods-TrainingAndEmploymentServices.debug.xcconfig"; sourceTree = "<group>"; };
 		7C77BF9D4438EB011D423EBA /* Pods_TrainingAndEmploymentServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainingAndEmploymentServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,7 +70,16 @@
 		B2381DF6284433D100A9A9C7 /* GoogleAdID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAdID.swift; sourceTree = "<group>"; };
 		B2381DFA2844414000A9A9C7 /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
 		B25355652844F98B003F44C7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		B2535BAA284B9CDB007899FD /* SelfRelianceTrainingFunctionalTraining.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SelfRelianceTrainingFunctionalTraining.csv; sourceTree = "<group>"; };
+		B2535BAC284B9CE3007899FD /* SelfRelianceTrainingLifeTraining.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SelfRelianceTrainingLifeTraining.csv; sourceTree = "<group>"; };
+		B2535BAE284B9CEB007899FD /* HomestayTypeSelfRelianceTraining.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomestayTypeSelfRelianceTraining.csv; sourceTree = "<group>"; };
+		B2535BB0284B9CF7007899FD /* LaborMigrationSupport.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LaborMigrationSupport.csv; sourceTree = "<group>"; };
+		B2535BB2284B9CFE007899FD /* WorkforceRehabilitationSupportTypeA.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WorkforceRehabilitationSupportTypeA.csv; sourceTree = "<group>"; };
+		B2535BB4284B9D05007899FD /* WorkforceRehabilitationSupportTypeB.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WorkforceRehabilitationSupportTypeB.csv; sourceTree = "<group>"; };
+		B2535BB6284B9D0D007899FD /* WorkForceSupport.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WorkForceSupport.csv; sourceTree = "<group>"; };
 		B254D7082836E26D00720231 /* CSVsyurousien.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVsyurousien.swift; sourceTree = "<group>"; };
+		B28EE16F284BF6B000180139 /* TrainingAndEmploymentServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingAndEmploymentServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B28EE171284BF6B000180139 /* UseCaseCsvConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseCsvConversionTests.swift; sourceTree = "<group>"; };
 		B2916E8B282EFBCF006134BE /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		B2916E8D282EFBDC006134BE /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		B2916E90282EFCAF006134BE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -89,6 +116,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B28EE16C284BF6B000180139 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2A945CB282C6B810001B737 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,6 +169,14 @@
 				B254D7082836E26D00720231 /* CSVsyurousien.swift */,
 			);
 			path = syurousien;
+			sourceTree = "<group>";
+		};
+		B28EE170284BF6B000180139 /* TrainingAndEmploymentServicesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B28EE171284BF6B000180139 /* UseCaseCsvConversionTests.swift */,
+			);
+			path = TrainingAndEmploymentServicesTests;
 			sourceTree = "<group>";
 		};
 		B2916E8A282EFBA5006134BE /* WebView */ = {
@@ -205,6 +247,13 @@
 		B2981489282DB07000A3D0C3 /* CSV */ = {
 			isa = PBXGroup;
 			children = (
+				B2535BB6284B9D0D007899FD /* WorkForceSupport.csv */,
+				B2535BB4284B9D05007899FD /* WorkforceRehabilitationSupportTypeB.csv */,
+				B2535BB2284B9CFE007899FD /* WorkforceRehabilitationSupportTypeA.csv */,
+				B2535BAC284B9CE3007899FD /* SelfRelianceTrainingLifeTraining.csv */,
+				B2535BB0284B9CF7007899FD /* LaborMigrationSupport.csv */,
+				B2535BAE284B9CEB007899FD /* HomestayTypeSelfRelianceTraining.csv */,
+				B2535BAA284B9CDB007899FD /* SelfRelianceTrainingFunctionalTraining.csv */,
 				B2A945EB282C73500001B737 /* ChildDevelopmentSupport.csv */,
 				B254D7072836E23900720231 /* syurousien */,
 			);
@@ -224,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				B2A945D0282C6B810001B737 /* TrainingAndEmploymentServices */,
+				B28EE170284BF6B000180139 /* TrainingAndEmploymentServicesTests */,
 				B2A945CF282C6B810001B737 /* Products */,
 				B2916E8F282EFCAF006134BE /* Frameworks */,
 				8D709717E06FAEB299AA9D34 /* Pods */,
@@ -234,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				B2A945CE282C6B810001B737 /* TrainingAndEmploymentServices.app */,
+				B28EE16F284BF6B000180139 /* TrainingAndEmploymentServicesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -311,6 +362,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B28EE16E284BF6B000180139 /* TrainingAndEmploymentServicesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B28EE177284BF6B000180139 /* Build configuration list for PBXNativeTarget "TrainingAndEmploymentServicesTests" */;
+			buildPhases = (
+				B28EE16B284BF6B000180139 /* Sources */,
+				B28EE16C284BF6B000180139 /* Frameworks */,
+				B28EE16D284BF6B000180139 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B28EE174284BF6B000180139 /* PBXTargetDependency */,
+			);
+			name = TrainingAndEmploymentServicesTests;
+			productName = TrainingAndEmploymentServicesTests;
+			productReference = B28EE16F284BF6B000180139 /* TrainingAndEmploymentServicesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B2A945CD282C6B810001B737 /* TrainingAndEmploymentServices */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2A945E2282C6B850001B737 /* Build configuration list for PBXNativeTarget "TrainingAndEmploymentServices" */;
@@ -338,9 +407,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					B28EE16E284BF6B000180139 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = B2A945CD282C6B810001B737;
+					};
 					B2A945CD282C6B810001B737 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
@@ -360,25 +433,40 @@
 			projectRoot = "";
 			targets = (
 				B2A945CD282C6B810001B737 /* TrainingAndEmploymentServices */,
+				B28EE16E284BF6B000180139 /* TrainingAndEmploymentServicesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B28EE16D284BF6B000180139 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2A945CC282C6B810001B737 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2535BB7284B9D0D007899FD /* WorkForceSupport.csv in Resources */,
+				B2535BB3284B9CFE007899FD /* WorkforceRehabilitationSupportTypeA.csv in Resources */,
+				B2535BAB284B9CDB007899FD /* SelfRelianceTrainingFunctionalTraining.csv in Resources */,
 				B2A945DE282C6B850001B737 /* LaunchScreen.storyboard in Resources */,
+				B2535BB5284B9D05007899FD /* WorkforceRehabilitationSupportTypeB.csv in Resources */,
 				B2A945EC282C73510001B737 /* ChildDevelopmentSupport.csv in Resources */,
 				B2916E8E282EFBDC006134BE /* WebView.storyboard in Resources */,
+				B2535BAF284B9CEB007899FD /* HomestayTypeSelfRelianceTraining.csv in Resources */,
 				B2C2E8E628411450001A4316 /* Search.storyboard in Resources */,
 				B2B85EFA282D43400065E12E /* Map.storyboard in Resources */,
 				B2981488282DAF2200A3D0C3 /* ChildDevelopmentSupport.json in Resources */,
+				B2535BB1284B9CF7007899FD /* LaborMigrationSupport.csv in Resources */,
 				B2A945DB282C6B850001B737 /* Assets.xcassets in Resources */,
 				B2A945D9282C6B810001B737 /* Main.storyboard in Resources */,
 				B2B85EFC282D434B0065E12E /* Setting.storyboard in Resources */,
 				B2B01A442848203D00B820AC /* DetailSearch.storyboard in Resources */,
+				B2535BAD284B9CE3007899FD /* SelfRelianceTrainingLifeTraining.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +532,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B28EE16B284BF6B000180139 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B28EE172284BF6B000180139 /* UseCaseCsvConversionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2A945CA282C6B810001B737 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,6 +572,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B28EE174284BF6B000180139 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2A945CD282C6B810001B737 /* TrainingAndEmploymentServices */;
+			targetProxy = B28EE173284BF6B000180139 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B2A945D7282C6B810001B737 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -496,6 +600,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B28EE175284BF6B000180139 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DJ7VR35KC8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muranaka.TrainingAndEmploymentServicesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainingAndEmploymentServices.app/TrainingAndEmploymentServices";
+			};
+			name = Debug;
+		};
+		B28EE176284BF6B000180139 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DJ7VR35KC8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muranaka.TrainingAndEmploymentServicesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainingAndEmploymentServices.app/TrainingAndEmploymentServices";
+			};
+			name = Release;
+		};
 		B2A945E0282C6B850001B737 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -677,6 +819,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B28EE177284BF6B000180139 /* Build configuration list for PBXNativeTarget "TrainingAndEmploymentServicesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B28EE175284BF6B000180139 /* Debug */,
+				B28EE176284BF6B000180139 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B2A945C9282C6B810001B737 /* Build configuration list for PBXProject "TrainingAndEmploymentServices" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
