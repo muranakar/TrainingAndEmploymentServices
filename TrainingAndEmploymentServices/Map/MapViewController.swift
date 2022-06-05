@@ -37,6 +37,11 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureIndicatorSetting()
+        indicator.startAnimating()
+        configurePrefectureLabel()
+        configureViewInitialLabel()
+        configureAdBannar()
         if let loadedFilterServiceType = filterServiceTypeRepository.load() {
             filterServiceType = loadedFilterServiceType
         } else {
@@ -50,17 +55,15 @@ class MapViewController: UIViewController {
             )
             DispatchQueue.main.async { [weak self] in
                 self?.setupLococationManager()
+                self?.indicator.stopAnimating()
             }
         }
-
-        configurePrefectureLabel()
-        configureViewInitialLabel()
-        configureAdBannar()
         pickerKeyboardView.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        indicator.startAnimating()
         // 都道府県情報が保存されていれば、その情報を適応
         // 保存されていない場合は、東京の情報を適応
         if let loadedFilterServiceType = filterServiceTypeRepository.load() {
@@ -83,6 +86,7 @@ class MapViewController: UIViewController {
             )
             DispatchQueue.main.async { [weak self] in
                 self?.filterFacilityInformationAndAddAnnotations(prefecture: self!.prefecture)
+                self?.indicator.stopAnimating()
             }
         }
     }
@@ -137,7 +141,17 @@ class MapViewController: UIViewController {
             performSegue(withIdentifier: "detailSearchVC", sender: sender)
         }
     }
-
+    // 参考：https://cpoint-lab.co.jp/article/201911/12587/
+    func configureIndicatorSetting() {
+        // 表示位置を設定（画面中央）
+        indicator.center = view.center
+        // インジケーターのスタイルを指定（白色＆大きいサイズ）
+        indicator.style = .large
+        // インジケーターの色を設定（青色）
+        indicator.color = UIColor(named: "Color")
+        // インジケーターを View に追加
+        view.addSubview(indicator)
+    }
     private func filterFacilityInformationAndAddAnnotations(prefecture: JapanesePrefecture) {
         // 都道府県ごとの事業所をフィルター実施。
         let filterFacilityInformation = facilityInformations.filter { facilityInformation in
@@ -171,7 +185,10 @@ class MapViewController: UIViewController {
     }
 
     private func configurePrefectureLabel() {
-        guard let prefecture = prefectureRepository.load() else { return }
+        guard let prefecture = prefectureRepository.load() else {
+            prefectureLabel.text = "東京都の事業所　表示中"
+            return
+        }
         prefectureLabel.text = "\(prefecture.nameWithSuffix)の事業所　表示中"
     }
     private func configureViewLabel() {
