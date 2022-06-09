@@ -11,13 +11,6 @@
 		B2381DF7284433D100A9A9C7 /* GoogleAdID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2381DF6284433D100A9A9C7 /* GoogleAdID.swift */; };
 		B2381DFB2844414000A9A9C7 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2381DFA2844414000A9A9C7 /* SearchUseCase.swift */; };
 		B25355662844F98B003F44C7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25355652844F98B003F44C7 /* SearchTableViewCell.swift */; };
-		B2535BAB284B9CDB007899FD /* SelfRelianceTrainingFunctionalTraining.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BAA284B9CDB007899FD /* SelfRelianceTrainingFunctionalTraining.csv */; };
-		B2535BAD284B9CE3007899FD /* SelfRelianceTrainingLifeTraining.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BAC284B9CE3007899FD /* SelfRelianceTrainingLifeTraining.csv */; };
-		B2535BAF284B9CEB007899FD /* HomestayTypeSelfRelianceTraining.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BAE284B9CEB007899FD /* HomestayTypeSelfRelianceTraining.csv */; };
-		B2535BB1284B9CF7007899FD /* LaborMigrationSupport.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BB0284B9CF7007899FD /* LaborMigrationSupport.csv */; };
-		B2535BB3284B9CFE007899FD /* WorkforceRehabilitationSupportTypeA.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BB2284B9CFE007899FD /* WorkforceRehabilitationSupportTypeA.csv */; };
-		B2535BB5284B9D05007899FD /* WorkforceRehabilitationSupportTypeB.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BB4284B9D05007899FD /* WorkforceRehabilitationSupportTypeB.csv */; };
-		B2535BB7284B9D0D007899FD /* WorkForceSupport.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2535BB6284B9D0D007899FD /* WorkForceSupport.csv */; };
 		B254D7092836E26D00720231 /* CSVsyurousien.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254D7082836E26D00720231 /* CSVsyurousien.swift */; };
 		B28EE172284BF6B000180139 /* UseCaseCsvConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE171284BF6B000180139 /* UseCaseCsvConversionTests.swift */; };
 		B28EE17B284C053F00180139 /* CSVConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EE17A284C053F00180139 /* CSVConversion.swift */; };
@@ -46,6 +39,13 @@
 		B2A945EC282C73510001B737 /* ChildDevelopmentSupport.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2A945EB282C73500001B737 /* ChildDevelopmentSupport.csv */; };
 		B2B01A442848203D00B820AC /* DetailSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B01A432848203D00B820AC /* DetailSearch.storyboard */; };
 		B2B01A462848204E00B820AC /* DetailSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B01A452848204E00B820AC /* DetailSearchViewController.swift */; };
+		B2B85C0F2852B540001A0EFA /* WorkForceSupport.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2B85C082852B53F001A0EFA /* WorkForceSupport.csv */; };
+		B2B85C102852B540001A0EFA /* WorkforceRehabilitationSupportTypeA.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2B85C092852B53F001A0EFA /* WorkforceRehabilitationSupportTypeA.csv */; };
+		B2B85C112852B540001A0EFA /* HomestayTypeSelfRelianceTraining.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2B85C0A2852B53F001A0EFA /* HomestayTypeSelfRelianceTraining.csv */; };
+		B2B85C122852B540001A0EFA /* WorkforceRehabilitationSupportTypeB.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2B85C0B2852B53F001A0EFA /* WorkforceRehabilitationSupportTypeB.csv */; };
+		B2B85C132852B540001A0EFA /* SelfRelianceTrainingLifeTraining.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2B85C0C2852B53F001A0EFA /* SelfRelianceTrainingLifeTraining.csv */; };
+		B2B85C142852B540001A0EFA /* LaborMigrationSupport.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2B85C0D2852B53F001A0EFA /* LaborMigrationSupport.csv */; };
+		B2B85C152852B540001A0EFA /* SelfRelianceTrainingFunctionalTraining.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2B85C0E2852B53F001A0EFA /* SelfRelianceTrainingFunctionalTraining.csv */; };
 		B2B85EFA282D43400065E12E /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B85EF9282D43400065E12E /* Map.storyboard */; };
 		B2B85EFC282D434B0065E12E /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B85EFB282D434B0065E12E /* Setting.storyboard */; };
 		B2B85EFE282D43580065E12E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B85EFD282D43580065E12E /* MapViewController.swift */; };
@@ -72,13 +72,6 @@
 		B2381DF6284433D100A9A9C7 /* GoogleAdID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAdID.swift; sourceTree = "<group>"; };
 		B2381DFA2844414000A9A9C7 /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
 		B25355652844F98B003F44C7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		B2535BAA284B9CDB007899FD /* SelfRelianceTrainingFunctionalTraining.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SelfRelianceTrainingFunctionalTraining.csv; sourceTree = "<group>"; };
-		B2535BAC284B9CE3007899FD /* SelfRelianceTrainingLifeTraining.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SelfRelianceTrainingLifeTraining.csv; sourceTree = "<group>"; };
-		B2535BAE284B9CEB007899FD /* HomestayTypeSelfRelianceTraining.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomestayTypeSelfRelianceTraining.csv; sourceTree = "<group>"; };
-		B2535BB0284B9CF7007899FD /* LaborMigrationSupport.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LaborMigrationSupport.csv; sourceTree = "<group>"; };
-		B2535BB2284B9CFE007899FD /* WorkforceRehabilitationSupportTypeA.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WorkforceRehabilitationSupportTypeA.csv; sourceTree = "<group>"; };
-		B2535BB4284B9D05007899FD /* WorkforceRehabilitationSupportTypeB.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WorkforceRehabilitationSupportTypeB.csv; sourceTree = "<group>"; };
-		B2535BB6284B9D0D007899FD /* WorkForceSupport.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WorkForceSupport.csv; sourceTree = "<group>"; };
 		B254D7082836E26D00720231 /* CSVsyurousien.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVsyurousien.swift; sourceTree = "<group>"; };
 		B28EE16F284BF6B000180139 /* TrainingAndEmploymentServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingAndEmploymentServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28EE171284BF6B000180139 /* UseCaseCsvConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseCsvConversionTests.swift; sourceTree = "<group>"; };
@@ -110,6 +103,13 @@
 		B2A945EB282C73500001B737 /* ChildDevelopmentSupport.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChildDevelopmentSupport.csv; sourceTree = "<group>"; };
 		B2B01A432848203D00B820AC /* DetailSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailSearch.storyboard; sourceTree = "<group>"; };
 		B2B01A452848204E00B820AC /* DetailSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSearchViewController.swift; sourceTree = "<group>"; };
+		B2B85C082852B53F001A0EFA /* WorkForceSupport.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WorkForceSupport.csv; sourceTree = "<group>"; };
+		B2B85C092852B53F001A0EFA /* WorkforceRehabilitationSupportTypeA.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WorkforceRehabilitationSupportTypeA.csv; sourceTree = "<group>"; };
+		B2B85C0A2852B53F001A0EFA /* HomestayTypeSelfRelianceTraining.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomestayTypeSelfRelianceTraining.csv; sourceTree = "<group>"; };
+		B2B85C0B2852B53F001A0EFA /* WorkforceRehabilitationSupportTypeB.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WorkforceRehabilitationSupportTypeB.csv; sourceTree = "<group>"; };
+		B2B85C0C2852B53F001A0EFA /* SelfRelianceTrainingLifeTraining.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SelfRelianceTrainingLifeTraining.csv; sourceTree = "<group>"; };
+		B2B85C0D2852B53F001A0EFA /* LaborMigrationSupport.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LaborMigrationSupport.csv; sourceTree = "<group>"; };
+		B2B85C0E2852B53F001A0EFA /* SelfRelianceTrainingFunctionalTraining.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SelfRelianceTrainingFunctionalTraining.csv; sourceTree = "<group>"; };
 		B2B85EF9282D43400065E12E /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		B2B85EFB282D434B0065E12E /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		B2B85EFD282D43580065E12E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -253,13 +253,13 @@
 		B2981489282DB07000A3D0C3 /* CSV */ = {
 			isa = PBXGroup;
 			children = (
-				B2535BB6284B9D0D007899FD /* WorkForceSupport.csv */,
-				B2535BB4284B9D05007899FD /* WorkforceRehabilitationSupportTypeB.csv */,
-				B2535BB2284B9CFE007899FD /* WorkforceRehabilitationSupportTypeA.csv */,
-				B2535BAC284B9CE3007899FD /* SelfRelianceTrainingLifeTraining.csv */,
-				B2535BB0284B9CF7007899FD /* LaborMigrationSupport.csv */,
-				B2535BAE284B9CEB007899FD /* HomestayTypeSelfRelianceTraining.csv */,
-				B2535BAA284B9CDB007899FD /* SelfRelianceTrainingFunctionalTraining.csv */,
+				B2B85C0A2852B53F001A0EFA /* HomestayTypeSelfRelianceTraining.csv */,
+				B2B85C0D2852B53F001A0EFA /* LaborMigrationSupport.csv */,
+				B2B85C0E2852B53F001A0EFA /* SelfRelianceTrainingFunctionalTraining.csv */,
+				B2B85C0C2852B53F001A0EFA /* SelfRelianceTrainingLifeTraining.csv */,
+				B2B85C092852B53F001A0EFA /* WorkforceRehabilitationSupportTypeA.csv */,
+				B2B85C0B2852B53F001A0EFA /* WorkforceRehabilitationSupportTypeB.csv */,
+				B2B85C082852B53F001A0EFA /* WorkForceSupport.csv */,
 				B2A945EB282C73500001B737 /* ChildDevelopmentSupport.csv */,
 				B254D7072836E23900720231 /* syurousien */,
 			);
@@ -456,23 +456,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2535BB7284B9D0D007899FD /* WorkForceSupport.csv in Resources */,
-				B2535BB3284B9CFE007899FD /* WorkforceRehabilitationSupportTypeA.csv in Resources */,
-				B2535BAB284B9CDB007899FD /* SelfRelianceTrainingFunctionalTraining.csv in Resources */,
 				B2A945DE282C6B850001B737 /* LaunchScreen.storyboard in Resources */,
-				B2535BB5284B9D05007899FD /* WorkforceRehabilitationSupportTypeB.csv in Resources */,
 				B2A945EC282C73510001B737 /* ChildDevelopmentSupport.csv in Resources */,
 				B2916E8E282EFBDC006134BE /* WebView.storyboard in Resources */,
-				B2535BAF284B9CEB007899FD /* HomestayTypeSelfRelianceTraining.csv in Resources */,
 				B2C2E8E628411450001A4316 /* Search.storyboard in Resources */,
+				B2B85C112852B540001A0EFA /* HomestayTypeSelfRelianceTraining.csv in Resources */,
+				B2B85C0F2852B540001A0EFA /* WorkForceSupport.csv in Resources */,
 				B2B85EFA282D43400065E12E /* Map.storyboard in Resources */,
+				B2B85C102852B540001A0EFA /* WorkforceRehabilitationSupportTypeA.csv in Resources */,
 				B2981488282DAF2200A3D0C3 /* ChildDevelopmentSupport.json in Resources */,
-				B2535BB1284B9CF7007899FD /* LaborMigrationSupport.csv in Resources */,
 				B2A945DB282C6B850001B737 /* Assets.xcassets in Resources */,
+				B2B85C152852B540001A0EFA /* SelfRelianceTrainingFunctionalTraining.csv in Resources */,
+				B2B85C142852B540001A0EFA /* LaborMigrationSupport.csv in Resources */,
 				B2A945D9282C6B810001B737 /* Main.storyboard in Resources */,
+				B2B85C122852B540001A0EFA /* WorkforceRehabilitationSupportTypeB.csv in Resources */,
 				B2B85EFC282D434B0065E12E /* Setting.storyboard in Resources */,
 				B2B01A442848203D00B820AC /* DetailSearch.storyboard in Resources */,
-				B2535BAD284B9CE3007899FD /* SelfRelianceTrainingLifeTraining.csv in Resources */,
+				B2B85C132852B540001A0EFA /* SelfRelianceTrainingLifeTraining.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +768,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DJ7VR35KC8;
@@ -787,6 +788,7 @@
 				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.muranaka.TrainingAndEmploymentServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -799,6 +801,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DJ7VR35KC8;
@@ -818,6 +821,7 @@
 				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.muranaka.TrainingAndEmploymentServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
