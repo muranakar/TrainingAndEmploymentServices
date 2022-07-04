@@ -55,17 +55,24 @@
                                 <rect key="frame" x="0.0" y="653" width="414" height="80"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="1By-an-czA">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="80"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="nAl-AG-SS7" appends="YES" id="154-XF-KgY"/>
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LINE_Brand_icon" translatesAutoresizingMaskIntoConstraints="NO" id="rJJ-Sh-JoV">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="80"/>
+                                        <rect key="frame" x="138" y="0.0" width="138" height="80"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="hmK-ZY-mHV" appends="YES" id="AUL-8c-XIW"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="otherApp" translatesAutoresizingMaskIntoConstraints="NO" id="6LY-NC-fsG">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="80"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="STl-ru-OHL" appends="YES" id="8aM-kF-aUc"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -126,6 +133,11 @@
                         <action selector="shareLine:" destination="Y6W-OH-hqX" id="dWV-zR-B8K"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="STl-ru-OHL">
+                    <connections>
+                        <action selector="shareOtherApp:" destination="Y6W-OH-hqX" id="yhs-bi-ktU"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="91.741071428571431"/>
         </scene>
@@ -141,6 +153,7 @@
     <resources>
         <image name="LINE_Brand_icon" width="1001" height="1000"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="otherApp" width="1080" height="1080"/>
         <image name="twitter" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
